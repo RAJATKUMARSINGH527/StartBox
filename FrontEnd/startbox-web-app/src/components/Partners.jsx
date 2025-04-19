@@ -2,14 +2,22 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+import fourPinesLogo from '../assets/4pines.png';
+import stoverLogo from '../assets/stover.png';
+import standishLogo from '../assets/standish.png';
+import cornerstoneLogo from '../assets/cornerstone.png';
+import belltowerLogo from '../assets/belltower.png';
+
+
+
 const Partners = () => {
   const partners = [
-    { name: '4Pines', image: '/api/placeholder/120/40' },
-    { name: 'Stover', image: '/api/placeholder/120/40' },
-    { name: 'Standish', image: '/api/placeholder/120/40' },
-    { name: 'Cornerstone', image: '/api/placeholder/120/40' },
-    { name: 'Belltower', image: '/api/placeholder/120/40' }
-  ];
+    { name: '4Pines', image: fourPinesLogo },
+    { name: 'Stover', image: stoverLogo },
+    { name: 'Standish', image: standishLogo },
+    { name: 'Cornerstone', image: cornerstoneLogo },
+    { name: 'Belltower', image: belltowerLogo },
+ ] 
 
   return (
     <div className="px-6 md:px-12 py-16 bg-gray-950 border-t border-gray-800">
@@ -20,7 +28,7 @@ const Partners = () => {
       <div className="flex flex-wrap justify-center gap-8 mb-12">
         {partners.map((partner, index) => (
           <div key={index} className="grayscale opacity-70 hover:opacity-100 transition cursor-pointer">
-            <img src={partner.image} alt={partner.name} className="h-10" />
+            <img src={partner.image} alt={partner.name} className="h-15" />
           </div>
         ))}
       </div>
